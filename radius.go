@@ -10,13 +10,7 @@ import (
 	"github.com/google/gopacket/layers"
 )
 
-const (
-	radiusMinimumRecordSizeInBytes int = 20
-)
-
-var (
-	LayerTypeRADIUS = gopacket.RegisterLayerType(1812, gopacket.LayerTypeMetadata{Name: "RADIUS", Decoder: gopacket.DecodeFunc(decodeRADIUS)})
-)
+const radiusMinimumRecordSizeInBytes int = 20
 
 // RADIUS represents a Remote Authentication Dial In User Service layer.
 type RADIUS struct {
