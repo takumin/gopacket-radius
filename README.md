@@ -1,5 +1,6 @@
 [![CI](https://github.com/takumin/gopacket-radius/workflows/CI/badge.svg)](https://github.com/takumin/gopacket-radius/actions)
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/takumin/gopacket-radius)](https://pkg.go.dev/github.com/takumin/gopacket-radius)
+[![codecov](https://codecov.io/gh/takumin/gopacket-radius/branch/master/graph/badge.svg)](https://codecov.io/gh/takumin/gopacket-radius)
 
 # gopacket-radius
 [RADIUS Protocol](https://en.wikipedia.org/wiki/RADIUS) extension for [google/gopacket](https://github.com/google/gopacket)
