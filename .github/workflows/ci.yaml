@@ -20,7 +20,7 @@ jobs:
       matrix:
         go-version: ['1.15', '1.14', '1.13']
         os-type: ['ubuntu']
-    name: ${{ matrix.os-type }} / Go ${{ matrix.go-version }}
+    name: ${{ runner.os }} / Go ${{ matrix.go-version }}
     runs-on: ${{ matrix.os-type }}-latest
     steps:
       - uses: actions/checkout@v2
