@@ -2,7 +2,7 @@
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/takumin/gopacket-radius)](https://pkg.go.dev/github.com/takumin/gopacket-radius)
 
 # gopacket-radius
-[google/gopacket: Provides packet processing capabilities for Go](https://github.com/google/gopacket) extension
+[RADIUS Protocol](https://en.wikipedia.org/wiki/RADIUS) extension for [google/gopacket](https://github.com/google/gopacket)
 
 # How to use
 ```go
