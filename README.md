@@ -7,7 +7,7 @@
 # gopacket-radius
 [RADIUS Protocol](https://en.wikipedia.org/wiki/RADIUS) extension for [google/gopacket](https://github.com/google/gopacket)
 
-# How to use
+## How to use
 ```go
 package main
 
@@ -54,3 +54,6 @@ func main() {
 	}
 }
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftakumin%2Fgopacket-radius.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftakumin%2Fgopacket-radius?ref=badge_large)
