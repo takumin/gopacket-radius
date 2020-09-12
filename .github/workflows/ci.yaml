@@ -21,11 +21,9 @@ jobs:
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
-      - name: golangci-lint
-        uses: golangci/golangci-lint-action@v2
       - name: Setup modules
         run: go mod download
-      - name: Run golangci-lint
-        run: golangci-lint run
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v2
       - name: Run tests
         run: go test -race -v ./...
