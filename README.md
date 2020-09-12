@@ -1,3 +1,5 @@
+![CI](https://github.com/takumin/gopacket-radius/workflows/CI/badge.svg)
+
 # gopacket-radius
 [google/gopacket: Provides packet processing capabilities for Go](https://github.com/google/gopacket) extension
 
