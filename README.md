@@ -10,13 +10,13 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"io"
 	"log"
 	"os"
 
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/pcap"
-	"github.com/k0kubun/pp"
 	_ "github.com/takumin/gopacket-radius/pkg/radius"
 )
 
@@ -47,7 +47,7 @@ func main() {
 			log.Fatal(err)
 		}
 
-		pp.Println(pkt)
+		fmt.Println(pkt)
 	}
 }
 ```
