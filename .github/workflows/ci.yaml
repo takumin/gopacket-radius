@@ -42,5 +42,5 @@ jobs:
           OS: ${{ runner.os }}
           GOVERSION: ${{ matrix.go-version }}
         with:
-          file: coverage.txt
+          file: coverage
           env_vars: OS,GOVERSION
