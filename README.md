@@ -2,6 +2,7 @@
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/takumin/gopacket-radius)](https://pkg.go.dev/github.com/takumin/gopacket-radius)
 [![Codecov](https://codecov.io/gh/takumin/gopacket-radius/branch/master/graph/badge.svg)](https://codecov.io/gh/takumin/gopacket-radius)
 [![License](https://img.shields.io/badge/License-Apache2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![FOSSA](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftakumin%2Fgopacket-radius.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftakumin%2Fgopacket-radius?ref=badge_shield)
 
 # gopacket-radius
 [RADIUS Protocol](https://en.wikipedia.org/wiki/RADIUS) extension for [google/gopacket](https://github.com/google/gopacket)
