@@ -9,20 +9,20 @@ jobs:
       matrix:
         go: [ '1.15', '1.14', '1.13' ]
     steps:
-      - name: actions/checkout
+      - name: Checkout
         uses: actions/checkout@v2
-      - name: actions/setup-go
+      - name: Setup go
         uses: actions/setup-go@v2
         with:
           go-version: ${{ matrix.go }}
-      - name: actions/cache
+      - name: Setup golangci-lint
+        uses: golangci/golangci-lint-action@v2
+        with:
+          version: v1.29
+      - name: Cache modules
         uses: actions/cache@v2
         with:
           path: ~/go/pkg/mod
           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-go-
-      - name: golangci/golangci-lint-action
-        uses: golangci/golangci-lint-action@v2
-        with:
-          version: v1.29
