@@ -17,7 +17,7 @@ import (
 
 	"github.com/google/gopacket"
 	"github.com/google/gopacket/pcap"
-	_ "github.com/takumin/gopacket-radius/pkg/radius"
+	_ "github.com/takumin/gopacket-radius"
 )
 
 func main() {
