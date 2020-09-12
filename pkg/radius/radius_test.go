@@ -8,6 +8,32 @@ import (
 	"github.com/google/gopacket/layers"
 )
 
+func checkLayers(p gopacket.Packet, want []gopacket.LayerType, t *testing.T) {
+	layers := p.Layers()
+	t.Log("Checking packet layers, want", want)
+	for _, l := range layers {
+		t.Logf("  Got layer %v, %d bytes, payload of %d bytes", l.LayerType(),
+			len(l.LayerContents()), len(l.LayerPayload()))
+	}
+	t.Log(p)
+	if len(layers) < len(want) {
+		t.Errorf("  Number of layers mismatch: got %d want %d", len(layers),
+			len(want))
+		return
+	}
+	for i, l := range want {
+		if l == gopacket.LayerTypePayload {
+			// done matching layers
+			return
+		}
+
+		if layers[i].LayerType() != l {
+			t.Errorf("  Layer %d mismatch: got %v want %v", i,
+				layers[i].LayerType(), l)
+		}
+	}
+}
+
 func checkRADIUS(desc string, t *testing.T, packetBytes []byte, pExpectedRADIUS *RADIUS) {
 	// Analyse the packet bytes, yielding a new packet object p.
 	p := gopacket.NewPacket(packetBytes, layers.LinkTypeEthernet, gopacket.Default)
@@ -20,12 +46,12 @@ func checkRADIUS(desc string, t *testing.T, packetBytes []byte, pExpectedRADIUS 
 	//    Network Layer     = IPv4.
 	//    Transport Layer   = UDP.
 	//    Application Layer = RADIUS.
-	// checkLayers(p, []gopacket.LayerType{
-	// 	LayerTypeEthernet,
-	// 	LayerTypeIPv4,
-	// 	LayerTypeUDP,
-	// 	LayerTypeRADIUS,
-	// }, t)
+	checkLayers(p, []gopacket.LayerType{
+		layers.LayerTypeEthernet,
+		layers.LayerTypeIPv4,
+		layers.LayerTypeUDP,
+		LayerTypeRADIUS,
+	}, t)
 
 	// Select the Application (RADIUS) layer.
 	pResultRADIUS, ok := p.ApplicationLayer().(*RADIUS)
