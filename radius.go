@@ -380,7 +380,7 @@ func (radius *RADIUS) DecodeFromBytes(data []byte, df gopacket.DecodeFeedback) e
 		return fmt.Errorf("RADIUS length %d too short", len(data))
 	}
 
-	radius.BaseLayer = layers.BaseLayer{Contents: data}
+	radius.BaseLayer = layers.BaseLayer{Contents: data[:radiusMinimumRecordSizeInBytes]}
 
 	radius.Code = RADIUSCode(data[0])
 	radius.Identifier = RADIUSIdentifier(data[1])
