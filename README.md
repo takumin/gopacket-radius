@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-Apache2.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
 [![FOSSA](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftakumin%2Fgopacket-radius.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftakumin%2Fgopacket-radius?ref=badge_shield)
 
-This repository has been merged to https://github.com/google/gopacket/pull/821
+# This repository has been merged to https://github.com/google/gopacket/pull/821
 
 # gopacket-radius
 [RADIUS Protocol](https://en.wikipedia.org/wiki/RADIUS) extension for [google/gopacket](https://github.com/google/gopacket)
